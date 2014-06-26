@@ -14,6 +14,9 @@
 ActiveRecord::Schema.define(version: 20140626210922) do
 
   create_table "invitations", force: true do |t|
+    t.string   "inviter_name"
+    t.string   "invited_name"
+    t.string   "invited_email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
