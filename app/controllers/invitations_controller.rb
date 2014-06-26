@@ -1,5 +1,15 @@
 class InvitationsController < ApplicationController
 
+  PASSWORD = 'cervino'
+
+  def index
+    if params[:password] == PASSWORD
+      @invitations = Invitation.all
+    else
+      redirect_to root_url
+    end
+  end
+
   def show
     @invitation = Invitation.find(params[:id])
   end

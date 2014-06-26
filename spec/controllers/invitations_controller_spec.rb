@@ -4,6 +4,26 @@ describe InvitationsController do
 
   render_views
 
+  describe "GET /invitations" do
+    describe "with password" do
+      before do
+        get :index, password: InvitationsController::PASSWORD
+      end
+      it { should respond_with 200 }
+      it "assigns to @invitations" do
+        assigns(:invitations).should_not be_nil
+      end
+    end
+    it "redirects to root_url if password is not given" do
+      get :index
+      should redirect_to root_url
+    end
+    it "redirects to root_url if password if wrong"  do
+      get :index, password: 'asdfasfasfasfa'
+      should redirect_to root_url
+    end
+  end
+
   describe "GET /invitations/:id" do
     let(:invitation){Invitation.create!(inviter_name: 'dw', invited_name: 'kev', invited_email: 'kev@h.c')}
     before do
