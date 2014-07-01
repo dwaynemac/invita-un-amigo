@@ -14,6 +14,10 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+
+gem 'actionpack-action_caching'
+
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -28,6 +32,8 @@ gem 'spring',        group: :development
 gem "spring-commands-rspec", group: :development
 
 group :production do
+  gem 'memcachier'
+  gem 'dalli'
   gem 'rails_12factor'
   gem 'pg'
 end

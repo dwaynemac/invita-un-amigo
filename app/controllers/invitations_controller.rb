@@ -2,6 +2,8 @@ class InvitationsController < ApplicationController
 
   PASSWORD = 'cervino'
 
+  caches_action :new
+
   def index
     if params[:password] == PASSWORD
       @invitations = Invitation.all
