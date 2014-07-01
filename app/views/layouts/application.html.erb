@@ -1,14 +1,30 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Invitaciones</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= yield :head %>
 </head>
+
 <body>
 
-<%= yield %>
+    <div id="header">
+    <%= image_tag 'cabecera.png', width: 1178, height: 438, alt: 'img1' %>
+    </div>
 
+<div id="content">
+  <%= yield %>
+  <%= image_tag 'logo.png', width: 100, height: 88, alt: 'logo' %>
+</div>
+
+<div id="pie">
+  <p>Método DeRose - Cerviño | Tel: 4801 8522 | www.derosecervino.com.ar</p>
+</div>
+
+<%= yield :body_end %>
 </body>
 </html>
