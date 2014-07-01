@@ -1,1 +1,9 @@
-index invitations placeholder
+<table>
+  <% @invitations.each do |i| -%>
+    <tr>
+      <td><%= i.inviter_name %></td>
+      <td><%= i.invited_name %></td>
+      <td><%= i.invited_email %></td>
+    </tr>
+  <% end -%>
+</table>
