@@ -2,6 +2,7 @@ class InvitationsController < ApplicationController
 
   PASSWORD = 'cervino'
 
+  skip_before_action :verify_authenticity_token
   caches_action :new
 
   def index
