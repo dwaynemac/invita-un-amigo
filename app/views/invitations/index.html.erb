@@ -3,12 +3,14 @@
     <th>Alumno</th>
     <th>Invitado</th>
     <th>Email</th>
+    <th>enviada?</th>
   </tr>
   <% @invitations.each do |i| -%>
     <tr>
       <td><%= i.inviter_name %></td>
       <td><%= i.invited_name %></td>
       <td><%= i.invited_email %></td>
+      <td><%= t.sent? %></td>
     </tr>
   <% end -%>
 </table>
