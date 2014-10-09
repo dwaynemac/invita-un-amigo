@@ -30,9 +30,9 @@
       </span>
     </p>
     <p>
-      <span id="sprytextfield3">
+      <span id="sprytextfield4">
         <label for="phone">Teléfono de tu invitado:<br /></label>
-        <%= f.email_field :invited_phone, id: 'phone', accesskey: 'p', tabindex: 2, size: '30%' %>
+        <%= f.text_field :invited_phone, id: 'phone', accesskey: 'p', tabindex: 3, size: '30%' %>
         <span class="textfieldRequiredMsg">Con este dato podremos contactarnos con tu amigo.</span>
         <span class="textfieldInvalidFormatMsg">Invalid format.</span>
       </span>
@@ -48,5 +48,6 @@
     var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
     var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
     var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "email");
+    var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
   </script>
 <% end %>
