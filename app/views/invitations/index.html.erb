@@ -8,10 +8,10 @@
   </tr>
   <% @invitations.each do |i| -%>
     <tr>
-      <td><%= i.inviter_name %></td>
-      <td><%= i.invited_name %></td>
-      <td><%= i.invited_email %></td>
-      <td><%= i.invited_phone %></td>
+      <td><%= find_in_padma i.inviter_name %></td>
+      <td><%= find_in_padma i.invited_name %></td>
+      <td><%= find_in_padma i.invited_email %></td>
+      <td><%= find_in_padma i.invited_phone %></td>
       <td><%= i.sent? %></td>
     </tr>
   <% end -%>
