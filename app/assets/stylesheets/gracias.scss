@@ -1,0 +1,152 @@
+/* CSS Document */
+
+body{
+	font-size:80%;
+	font-family:Arial, Helvetica, sans-serif;
+	background-image:image-url('fondo02.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	background-position:50% 50%;
+	color:rgba(255,255,255,1);
+	margin:auto;
+	padding:0px;
+}
+
+.hideInMobile {
+  display: none;
+}
+
+header {
+	padding: 0px;
+	margin-top: 4em;
+ 	margin-bottom: 3em;
+    text-align: center;
+	letter-spacing: 2px;
+}
+
+p{
+	font-size:1em;
+	color:#000;
+	font-weight:bold;
+}
+
+#pie{
+	text-align:right;
+	margin:0px auto;
+	padding:0px;
+	height:auto;
+	width:60%;
+	clear:both;
+}
+
+
+#conteiner {
+	background-color:rgba(255,255,255,0.5);
+	width:100%;
+	}
+
+#content {
+	width:60%;
+	text-align:center;
+	margin-right:20%;
+	margin-left:20%;
+	margin-bottom:100px;
+	padding-top:10%;
+	color:#000;
+	}
+	
+	
+label {
+	font-size:1.2em; 
+}
+
+.versalita {
+	font-size:1.2em;
+	font-variant:small-caps;
+	font-weight:bold;
+	}
+
+img{
+	max-width:100%;
+	height:auto;
+}
+
+
+@media screen and (max-width:600px){
+input[type=text], input[type=url], input[type=email], input[type=password], input[type=tel] {
+  -webkit-appearance: none; -moz-appearance: none;
+  display: block;
+  margin: 0;
+  width: 100%; height: 30px;
+  line-height: 30px; font-size: 16px;
+  border: 1px solid #bbb;
+}
+
+}
+
+
+
+
+@media screen and (min-width:600px){
+  
+  body{
+	  font-size:90%;
+  }
+  
+  .hideInMobile {
+    display: block;
+  }
+
+  #header {
+	  margin-left:20%;
+	  margin-right:20%;
+  }
+	
+  #content{
+	  width:50%;
+	  text-align:center;
+	  margin-right:25%;
+	  margin-left:25%;
+	  padding-bottom:10px;
+  }
+	
+  #pie{
+	  margin-left:20%;
+	  margin-right:20%;
+  }
+
+  #pie p {
+	  padding-top:20px;
+	  padding-bottom:20px;
+	  margin:0px;
+	  font-size:80%
+	  }
+	
+  .form{
+	  margin-top:40px;
+	  margin-bottom:50px;
+	}
+	
+	h1 {	
+		font-size:2.3em;
+		margin-top:10px;
+		margin-left:0%;
+		margin-right:0%;
+	}
+
+}
+	
+@media screen and (min-width:1024px){
+  body{
+	  font-size:100%;
+  }
+  
+  #pie p {
+	  padding-top:50px;
+	  padding-bottom:20px;
+	  margin:0px;
+	  font-size:90%
+	  }
+ 
+}

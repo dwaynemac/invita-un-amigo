@@ -8,6 +8,7 @@ class InvitationsController < ApplicationController
   def index
     if params[:password] == PASSWORD
       @invitations = Invitation.all
+      render layout: false
     else
       redirect_to root_url
     end
