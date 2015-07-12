@@ -4,6 +4,7 @@ class InvitationsController < ApplicationController
 
   skip_before_action :verify_authenticity_token
   caches_action :new
+  caches_action :show
 
   def index
     if params[:password] == PASSWORD
