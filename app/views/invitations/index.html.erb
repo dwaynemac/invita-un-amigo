@@ -1,5 +1,6 @@
 <table>
   <tr>
+    <th>Fecha</th>
     <th>Alumno</th>
     <th>Invitado</th>
     <th>Email</th>
@@ -8,11 +9,16 @@
   </tr>
   <% @invitations.each do |i| -%>
     <tr>
+      <td><%= l i.created_at.to_date %></td>
       <td><%= find_in_padma i.inviter_name %></td>
       <td><%= find_in_padma i.invited_name %></td>
       <td><%= find_in_padma i.invited_email %></td>
       <td><%= find_in_padma i.invited_phone %></td>
-      <td><%= i.sent? %></td>
+      <td>
+        <%= form_for i, remote: true do |f| %>
+          <%= f.check_box :sent, class: 'sent_checkbox' %>
+        <% end -%>
+      </td>
     </tr>
   <% end -%>
 </table>
