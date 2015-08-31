@@ -8,7 +8,7 @@ class InvitationsController < ApplicationController
 
   def index
     if params[:password] == PASSWORD
-      @invitations = Invitation.all
+      @invitations = Invitation.order(:created_at).all
       render layout: 'admin'
     else
       redirect_to root_url
